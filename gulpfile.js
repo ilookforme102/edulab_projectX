@@ -25,6 +25,5 @@ gulp.task('serve', [], function () {
         }
     });
     gulp.watch(files, reload);
-    gulp.watch(files, reload);
-    gulp.watch(files, reload);
+
 });
