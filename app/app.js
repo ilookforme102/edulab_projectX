@@ -14,7 +14,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
 */
-var App = angular.module('myApp',['ui.router']);
+var App = angular.module('myApp',['ui.router','ngMaterial']);
 
 App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
   // For any unmatched url, send to /business
@@ -54,4 +54,21 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         }          }*/
 
       })
-}]);
+}])
+    .controller('AppCtrl', function($scope) {
+        $scope.title1 = 'Button';
+        $scope.title4 = 'Warn';
+        $scope.isDisabled = true;
+
+        $scope.googleUrl = 'http://google.com';
+
+    })
+    .controller ('checkboxCtrl', function ($scope) {
+        $scope.data = {};
+        $scope.data.cb1 = true;
+        $scope.data.cb2 = false;
+        $scope.data.cb3 = false;
+        $scope.data.cb4 = false;
+        $scope.data.cb5 = false;
+
+    })
