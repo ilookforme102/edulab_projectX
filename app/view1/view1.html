@@ -1,5 +1,176 @@
-<!--
+<!-- title starts here -->
+
+<div ng-controller="titleCtrl" layout="row" ng-cloak class="md-inline-form">
+
+    <md-content md-theme="docs-dark" layout-gt-sm="column" layout-padding>
+        <div>
+            <md-input-container>
+                <h2>Title: </h2>
+                <input ng-model="blueprints.title">
+            </md-input-container>
+
+        </div>
+        <div>
+            <md-input-container>
+                <h2>Grade: </h2>
+                <input ng-model="blueprints.grade">
+            </md-input-container>
+        </div>
+    </md-content>
+
+</div>
+
+<div ng-controller="DateCtrl"  ng-cloak>
+    <md-content layout-padding>
+
+        <div layout-gt-xs="column">
+            <div flex-gt-xs="50">
+                <h4>Start: </h4>
+                <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+            </div>
+            <div flex-gt-xs="50">
+                <h4>End: </h4>
+                <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+            </div>
+
+        </div>
+
+
+    </md-content>
+</div>
+
+
+
+
+
+<!-- checkbox starts here -->
 <div ng-controller="checkboxCtrl" class="md-padding" ng-cloak>
+    <div>
+     <fieldset class="standard">
+         <legend>Subject:</legend>
+         <div layout-wrap layout-gt-sm="row">
+
+                 <div flex-gt-sm="10">
+                     <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb1" class="md-primary">
+                         English
+                     </md-checkbox>
+                 </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb2" class="md-primary">
+                     Literature
+                 </md-checkbox>
+             </div>
+
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb3" class="md-primary">
+                     Mathematics
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb4" class="md-primary">
+                     Physics
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb5" class="md-primary">
+                     Biology
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb6" class="md-primary">
+                     Geography
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb7" class="md-primary">
+                     Chemistry
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb8" class="md-primary">
+                     History
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb9" class="md-primary">
+                     Music
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb10" class="md-primary">
+                     Visual arts
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb11" class="md-primary">
+                     Health Ed.
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb12" class="md-primary">
+                    Religion
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb13" class="md-primary">
+                     Ethics
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb14" class="md-primary">
+                     Social studies
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb15" class="md-primary">
+                     Crafts
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb16" class="md-primary">
+                     Physical Edu.
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb17" class="md-primary">
+                     Home Eco.
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb18" class="md-primary">
+                     Environmental
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb19" class="md-primary">
+                     Computer Sci.
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb20" class="md-primary">
+                     Natural Sci.
+                 </md-checkbox>
+             </div>
+             <div flex-gt-sm="10">
+                 <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb21" class="md-primary">
+                     Other
+                 </md-checkbox>
+             </div>
+
+
+
+
+         </div>
+     </fieldset>
+    </div>
+</div>
+<!-- keywords start here -->
+<div>
+
+
+</div>
+
+    <!--
     <form>
         <h3>Subjects: </h3>
         <p>
@@ -29,9 +200,9 @@
 
         </p>
     </form>
-
-</div>
 -->
+
+<!--
 
 <h1>Framework</h1>
     <form>
@@ -95,3 +266,4 @@
    <input type="text">
     <button type="button"></button>
 </div>
+-->

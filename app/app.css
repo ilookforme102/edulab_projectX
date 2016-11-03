@@ -23,3 +23,42 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+/* =============== styles for checkbox starts here=================*/
+.checkboxdemoBasicUsage div.flex-xs {
+  min-height: 40px; }
+
+.checkboxdemoBasicUsage .checkboxDemo1 div {
+  clear: both; }
+
+.checkboxdemoBasicUsage p {
+  padding-left: 8px; }
+
+.checkboxdemoBasicUsage fieldset.standard {
+  border-style: solid;
+  border-width: 1px; }
+
+.checkboxdemoBasicUsage legend {
+  color: #3F51B5; }
+
+.checkboxdemoBasicUsage legend code {
+  color: #3F51B5;
+  font-weight: normal; }
+
+.checkboxdemoBasicUsage .ipsum {
+  color: saddlebrown; }
+/* =============== styles for checkbox ends here =================*/
+
+/* =============== styles for calender starts here =================*/
+
+
+.datepickerdemoBasicUsage {
+  /** Demo styles for mdCalendar. */ }
+.datepickerdemoBasicUsage md-content {
+  padding-bottom: 200px; }
+.datepickerdemoBasicUsage .validation-messages {
+  font-size: 12px;
+  color: #dd2c00;
+  margin-left: 15px; }
+
+/* =============== styles for calender ends here =================*/
