@@ -1,14 +1,24 @@
+
+<head>
+
+
+
 <style>
-    table, th, td {
-        border: 1px solid black;
+    table, th, td, textarea{
+        border: 2px solid black;
         border-collapse: collapse;
     }
     th, td {
         padding: 5px;
-        text-align: center;
+        text-align: left;
 
 
     }
+    textarea {
+        border-style:inset;
+
+    }
+
 </style>
 <h1>
 <p>What is the driving question for this session?</p>
@@ -20,41 +30,59 @@
 
     <body>
     <div>
-    <h2>Example Questions</h2>
+    <h2>Example Questions:</h2>
     <table style="width:100%">
         <tr>
-            <th>How Can</th>
-            <th>I/We</th>
-            <th>Build / Create / Mate</th>
-            <th>Real World Problem</th>
+            <td class="mdl-data-table__cell--non-numeric">How Can</td>
+            <td class="mdl-data-table__cell--non-numeric" >I/We</td>
+            <td class="mdl-data-table__cell--non-numeric">Build / Create / Mate</td>
+            <td class="mdl-data-table__cell--non-numeric">Real World Problem</td>
         </tr>
         <tr>
-            <td>how do</td>
-            <td>We as...Role / Occupation</td>
-            <td>Design / Plan</td>
-            <td>For a Public audience</td>
+            <td class="mdl-data-table__cell--non-numeric">how do</td>
+            <td class="mdl-data-table__cell--non-numeric">We as...Role / Occupation</td>
+            <td class="mdl-data-table__cell--non-numeric" >Design / Plan</td>
+            <td class="mdl-data-table__cell--non-numeric">For a Public audience</td>
 
         </tr>
         <tr>
-            <td>Should</td>
-            <td>Town / City / Country</td>
-            <td>Solve</td>
-            <td>For a School</td>
+            <td class="mdl-data-table__cell--non-numeric">Should</td>
+            <td class="mdl-data-table__cell--non-numeric">Town / City / Country</td>
+            <td class="mdl-data-table__cell--non-numeric">Solve</td>
+            <td class="mdl-data-table__cell--non-numeric">For a School</td>
 
         </tr>
         <tr>
-            <td>Could</td>
-            <td>State / Nation</td>
-            <td>Write</td>
-            <td>For a classroom</td>
+            <td class="mdl-data-table__cell--non-numeric">Could</td>
+            <td class="mdl-data-table__cell--non-numeric">State / Nation</td>
+            <td class="mdl-data-table__cell--non-numeric">Write</td>
+            <td class="mdl-data-table__cell--non-numeric">For a classroom</td>
         </tr>
 
         <tr>
-            <td>What</td>
-            <td>Community / Organization</td>
-            <td>Propose / Decide</td>
-            <td>For an online audience</td>
+            <td class="mdl-data-table__cell--non-numeric">What</td>
+            <td class="mdl-data-table__cell--non-numeric">Community / Organization</td>
+            <td class="mdl-data-table__cell--non-numeric">Propose / Decide</td>
+            <td class="mdl-data-table__cell--non-numeric">For an online audience</td>
         </tr>
     </table>
  </div>
+
+   <div>
+    <p>
+        <md-input-container class="md-block">
+            <label>Create Questions: </label>
+            <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+       </p>
+   </div>
+
+
+    </table>
+
+
+
+
+
+
     </body>
