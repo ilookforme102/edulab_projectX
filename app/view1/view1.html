@@ -165,9 +165,12 @@
     </div>
 </div>
 <!-- keywords start here -->
-<div>
-
-
+<div ng-controller="keywordCtrl">
+<h2>Keywords:</h2>
+    <md-input-container>
+        <label>Keywords:</label>
+        <input type="text" ng-model="keywords" required md-maxlength="10"> <i class="material-icons"> done </i>
+    </md-input-container>
 </div>
 
     <!--

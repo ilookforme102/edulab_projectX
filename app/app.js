@@ -14,7 +14,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
 */
-var App = angular.module('myApp',['ui.router','ngMaterial', 'ngMessages']);
+var App = angular.module('myApp',['ui.router','ngMaterial', 'ngMessages','material.svgAssetsCache']);
 
 App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
   // For any unmatched url, send to /business
@@ -110,4 +110,15 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     })
     .controller('titleCtrl', function() {
 
-    })  ;
+    })
+
+
+    .controller('AppCtrls', function() {
+    this.items = [];
+    for (var i = 0; i < 1000; i++) {
+        this.items.push(i);
+    }
+});
+
+// just to test if it works
+
