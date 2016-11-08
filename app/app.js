@@ -115,10 +115,13 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
     .controller('AppCtrls', function() {
     this.items = [];
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < 6; i++) {
         this.items.push(i);
     }
-});
+})
+    .controller('alignLeftCtrl', function ($scope) {
+
+    });
 
 // just to test if it works
 

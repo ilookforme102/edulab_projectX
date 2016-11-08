@@ -11,40 +11,53 @@
 
 </div>
 -->
-<div ng-controller="AppCtrls as ctrl" ng-cloak class="virtualRepeatdemoVerticalUsage">
-  <md-content layout="column">
-   <h2>Active blueprints: </h2>
+<div class="container" >
+  <div class="row">
+   <div class="col-md-6">
+     <div ng-controller="AppCtrls as ctrl" ng-cloak class="virtualRepeatdemoVerticalUsage">
+       <div>
+         <md-content layout="column">
+           <h2>Active blueprints </h2>
 
-    <md-virtual-repeat-container id="vertical-container">
-      <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
-        {{item}}
+           <md-virtual-repeat-container id="vertical-container">
+             <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
+               {{item}}
+             </div>
+           </md-virtual-repeat-container>
+         </md-content>
+
+       </div>
+
+       <div>
+         <md-content layout="column">
+           <h2>Impending blueprints </h2>
+
+           <md-virtual-repeat-container id="vertical-container">
+             <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
+               {{item}}
+             </div>
+           </md-virtual-repeat-container>
+         </md-content>
+
+       </div>
+   </div>
+  </div>
+    <div ng-controller="AppCtrls as ctrl" ng-cloak class="virtualRepeatdemoVerticalUsage">
+    <div class="col-md-6">
+      <div>
+        <md-content layout="column">
+          <h2>Completed blueprints </h2>
+
+          <md-virtual-repeat-container id="vertical-container">
+            <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
+              {{item}}
+            </div>
+          </md-virtual-repeat-container>
+        </md-content>
+
       </div>
-    </md-virtual-repeat-container>
-  </md-content>
 
-  <br><br>
-
-  <md-content layout="column">
-    <h2>Impending blueprints: </h2>
-
-    <md-virtual-repeat-container id="vertical-container">
-      <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
-        {{item}}
-      </div>
-    </md-virtual-repeat-container>
-  </md-content>
-
-
-<br><br>
-  <md-content layout="row">
-    <h2>Impending blueprints: </h2>
-
-    <md-virtual-repeat-container id="vertical-container">
-      <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
-        {{item}}
-      </div>
-    </md-virtual-repeat-container>
-  </md-content>
-
+    </div>
 </div>
-
+  </div>
+</div>
