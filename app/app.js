@@ -68,7 +68,7 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 
     })
 .controller('RatingCtrl', function($scope) {
-    $scope.rating = 5;
+    $scope.rating1 = 5;
     $scope.rating2 = 5;
     $scope.rating3 = 5;
     $scope.rating4 = 5;
