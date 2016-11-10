@@ -69,14 +69,22 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     })
 .controller('RatingCtrl', function($scope) {
     $scope.rating = 5;
+    $scope.rating2 = 5;
+    $scope.rating3 = 5;
+    $scope.rating4 = 5;
+    $scope.rating5 = 5;
+    $scope.rating6 = 5;
+    $scope.rating7 = 5;
+
+
     $scope.rateFunction = function(rating) {
-        alert('Rating selected - ' + rating);
+        console.log('Rating selected - ' + rating);
     };
 })
     .directive('starRating',
         function() {
             return {
-                restrict : 'A',
+                restrict : 'AE',
                 template : '<ul class="rating">'
                 + '	<li ng-repeat="star in stars" ng-class="star" ng-click="toggle($index)">'
                 + '\u2605'
