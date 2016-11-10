@@ -16,7 +16,11 @@ gulp.task('serve', [], function () {
         'app/**/*.css',
         'app/assets/imgs/**/*.png',
         'app/**/*.js',
-        'app/*.js'
+        'app/*.js',
+        'app/**/**/*.html',
+        'app/**/**/*.css',
+        'app/**/**/*.js'
+
     ];
 
     browserSync.init(files, {

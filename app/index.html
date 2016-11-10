@@ -11,8 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="shared/css/left-side-nav-style.css">
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-material/angular-material.min.js"></script>
@@ -24,11 +25,21 @@
   <script src="bower_components/angular-mocks/angular-mocks.js"></script>
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
   <link rel="stylesheet" href="login/login.css">
+  <link rel="stylesheet" href="shared/css/sprints-style.css">
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="http://ngmaterial.assets.s3.amazonaws.com/svg-assets-cache.js"></script>
 
   <script src="app.js"></script>
   <script src="controllers.js"></script>
+
+  <script src="directives/tabs/tabDirective.js"></script>
+  <script src="directives/sprints/sprintsDirective.js"></script>
+
   <script src="login/login.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="directives/tabs/tabCtrl.js"></script>
+
 </head>
 <body >
 <nav class="navbar navbar-inverse" role="navigation">
@@ -42,8 +53,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ui-view></div>
-<p>commit ygaygdygadya</p>
+  <div class="uv"  ui-view></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>

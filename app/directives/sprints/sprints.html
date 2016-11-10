@@ -1,0 +1,81 @@
+<!-- <div ng-controller="AppCtrl as ctrl" ng-cloak="" class="virtualRepeatdemoVerticalUsage" >
+    <md-content layout="row">
+
+        <md-virtual-repeat-container id="vertical-container">
+            <md-toolbar class="md-accent">
+                <h2 class="md-toolbar-tools">
+                    <span>Complete Blueprint</span>
+                </h2>
+            </md-toolbar>
+
+            <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
+                <b>{{item}}</b>
+
+            </div>
+
+        </md-virtual-repeat-container>
+    </md-content>
+
+
+</div>
+-->
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
+-->
+<div class="container" >
+    <div class="row">
+        <div class="col-md-6">
+            <div ng-controller="AppCtrls as ctrl" ng-cloak class="virtualRepeatdemoVerticalUsage">
+                <div>
+                    <md-content layout="column">
+                        <h2>Active blueprints </h2>
+
+                        <md-virtual-repeat-container id="vertical-container">
+                            <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
+                                {{item}}
+                            </div>
+                        </md-virtual-repeat-container>
+                    </md-content>
+
+                </div>
+
+                <div>
+                    <md-content layout="column">
+                        <h2>Impending blueprints </h2>
+
+                        <md-virtual-repeat-container id="vertical-container">
+                            <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
+                                {{item}}
+                            </div>
+                        </md-virtual-repeat-container>
+                    </md-content>
+
+                </div>
+            </div>
+        </div>
+        <div ng-controller="AppCtrls as ctrl" ng-cloak class="virtualRepeatdemoVerticalUsage">
+            <div class="col-md-6">
+                <div>
+                    <md-content layout="column">
+                        <h2>Completed blueprints </h2>
+
+                        <md-virtual-repeat-container id="vertical-container">
+                            <div md-virtual-repeat="item in ctrl.items" class="repeated-item" flex="">
+                                {{item}}
+                            </div>
+                        </md-virtual-repeat-container>
+                    </md-content>
+
+                </div>
+
+            </div>
+            <div>
+                <br><br>
+                <md-button class="md-fab md-primary" aria-label="add note">
+                    <i class="material-icons">note_add</i>
+                </md-button>
+            </div>
+        </div>
+    </div>
+</div>

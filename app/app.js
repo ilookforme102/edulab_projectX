@@ -1,6 +1,6 @@
 'use strict';
 // Declare app level module which depends on views, and components
-var myApp = angular.module('myApp',['ui.router','ngMaterial','ngMessages'])
+var myApp = angular.module('myApp',['ui.router','ngMaterial','ngMessages','material.svgAssetsCache'])
 .config(['$stateProvider', '$urlRouterProvider','$mdThemingProvider', function($stateProvider, $urlRouterProvider,$mdThemingProvider){
     // For any unmatched url, send to /business
     $mdThemingProvider
@@ -16,6 +16,7 @@ var myApp = angular.module('myApp',['ui.router','ngMaterial','ngMessages'])
         .state('home', {//State demonstrating Nested views
             url: "/home",
             templateUrl: "view1/view1.html"
+
         })
         .state('progress', {//State demonstrating Multiple,named views
             url: "/progress",

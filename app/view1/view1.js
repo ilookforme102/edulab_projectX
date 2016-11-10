@@ -1,16 +1,36 @@
- /*
- 'use strict';
+myApp.controller('leftnavCtrl', function ($scope) {
+    $scope.isOpen = false;
+    $scope.menuId = 0;
 
-angular.module('myApp.view1', ['ngRoute'])
+    $scope.closeSidenav = function () {
+        if ($scope.isOpen) {
+            $scope.toggleExpanded(0);
+            $scope.isOpen = false;
+        }
+    };
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
-}])
+    $scope.toggleExpanded = function (selectedMenuId) {
+        if (!$scope.isOpen) {
+            $scope.isOpen = true;
+            $scope.menuId = selectedMenuId;
+        } else {
+            if ($scope.menuId === selectedMenuId) {
+                $scope.isOpen = false;
+                selectedMenuId = 0;
+            }
+            $scope.menuId = selectedMenuId;
+        }
+    };
+// Drop-down menu on top
+    $scope.isSelected = function (value) {
+        return $scope.menuId === value;
+    };
+    $scope.openMenu = function($mdOpenMenu, event) {
+        $mdOpenMenu(event);
+    };
+    $scope.redirect = function () {
+        window.location = "#/login"
+    };
 
-.controller('View1Ctrl', [function() {
 
-}]);
-*/
+});
