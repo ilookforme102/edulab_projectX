@@ -1,70 +1,53 @@
-<div ng-controller="AppCtrl" ng-cloak="" class="buttondemoBasicUsage" ng-app="MyApp">
-  <md-content>
+<div class="container"  ng-controller="mainController">
 
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-      <md-button>{{title1}}</md-button>
-      <md-button md-no-ink="" class="md-primary">Primary (md-noink)</md-button>
-      <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
-      <md-button class="md-warn">{{title4}}</md-button>
-      <div class="label">Flat</div>
-    </section>
-
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-      <md-button class="md-raised">Button</md-button>
-      <md-button class="md-raised md-primary">Primary</md-button>
-      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-      <md-button class="md-raised md-warn">Warn</md-button>
-      <div class="label">Raised</div>
-    </section>
-
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-      <md-button class="md-fab" aria-label="Eat cake">
-        <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
-      </md-button>
-
-      <md-button class="md-fab md-primary" aria-label="Use Android">
-        <md-icon md-svg-src="img/icons/android.svg"></md-icon>
-      </md-button>
-
-      <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
-        <md-icon md-svg-src="img/icons/ic_comment_24px.svg"></md-icon>
-      </md-button>
-
-      <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
-        <md-icon md-svg-src="img/icons/ic_people_24px.svg"></md-icon>
-      </md-button>
-
-      <md-button class="md-fab md-mini" aria-label="Eat cake">
-        <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
-      </md-button>
-
-      <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
-        <md-icon md-svg-src="img/icons/android.svg" style="color: greenyellow;"></md-icon>
-      </md-button>
-      <div class="label">FAB</div>
-    </section>
-
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-      <md-button ng-href="{{googleUrl}}" target="_blank">Default Link</md-button>
-      <md-button class="md-primary" ng-href="{{googleUrl}}" target="_blank">Primary Link</md-button>
-
-      <md-button>Default Button</md-button>
-      <div class="label">Link vs. Button</div>
-    </section>
-
-    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-      <md-button class="md-primary md-hue-1">Primary Hue 1</md-button>
-      <md-button class="md-warn md-raised md-hue-2">Warn Hue 2</md-button>
-      <md-button class="md-accent">Accent</md-button>
-      <md-button class="md-accent md-raised md-hue-1">Accent Hue 1</md-button>
-      <md-button></md-button>
-      <div class="label">Themed</div>
-    </section>
-
-  </md-content>
+<div class="alert alert-info">
+<h1>Forcasting the Furure <i class="large material-icons">assignment-ind</i></h1>
 </div>
 
-<!--
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that can be foundin the LICENSE file at http://material.angularjs.org/HEAD/license.
--->
+
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="Search" ng-model="searchname">
+      </div>
+    </div>
+  </form>
+
+  <table class="table table-bordered table-striped">
+
+    <thead>
+    <tr>
+      <td>
+        <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+          Name
+          <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+          <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+        </a>
+      </td>
+      <td style="color:blue">
+
+comment
+      </td>
+      <td>
+        <a href="#" ng-click="sortType = 'student_progress'; sortReverse = !sortReverse">
+progress          <span ng-show="sortType == 'student_progress' && !sortReverse" class="fa fa-caret-down"></span>
+          <span ng-show="sortType == 'student_progress' && sortReverse" class="fa fa-caret-up"></span>
+        </a>
+      </td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat=" student_data in progress_table  | orderBy:sortType:sortReverse | filter:searchname">
+      <td>{{ student_data.name }}</td>
+      <td>{{ student_data.student_comment }}</td>
+      <td>{{ student_data.student_progress }}</td>
+    </tr>
+    </tbody>
+
+  </table>
+
+
+
+</div>
