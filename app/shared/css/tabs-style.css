@@ -59,6 +59,8 @@ ul.rating {
 .rating .filled {
     color: gold;
 }
+
+/* scenario Kushal */
 table, th, td, textarea{
     border: 2px solid black;
     border-collapse: collapse;
@@ -66,7 +68,4 @@ table, th, td, textarea{
 th, td {
     padding: 5px;
     text-align: left;
-}
-textarea {
-    border-style:inset;
 }

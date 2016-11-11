@@ -134,4 +134,29 @@
 .login-button {
     border: 1px solid white
 }
-/* Stle for Login Modal */
+/* Style for Login Modal */
+/* style for cover image */
+div#popupContainer {
+    overflow: hidden;
+    min-height:100%;
+
+    /* The Magic */
+}
+
+
+div#popupContainer #portfolio-image {
+    margin-top: -1.4em;
+    padding-bottom: 1em;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+
+
+}
+div#popupContainer #portfolio-image img {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+
+}
+
